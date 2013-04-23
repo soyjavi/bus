@@ -14,7 +14,7 @@ module.exports = (grunt) ->
 
     source:
       coffee: [
-        'source/app.coffee',
+        'source/*.coffee',
         'source/models/*.coffee',
         'source/views/*.coffee',
         'source/controllers/*.coffee']
