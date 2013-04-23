@@ -1,0 +1,42 @@
+{
+  "name": "bus",
+  "description": "...",
+  "version": "0.1",
+  "homepage": "http://",
+  "author": {
+    "name": "Javi Jimenez",
+    "site": "http://*"
+  },
+  "main": [
+    "./lungo.js",
+    "./lungo.css"
+  ],
+  "keywords": [
+    "mobile"
+  ],
+  "dependencies": [
+    {
+      "quojs": "latest"
+    },
+    {
+      "lungo": "latest"
+    },
+    {
+      "monocle": "latest"
+    }
+  ],
+  "license": [
+    {
+      "type": "Commercial"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-coffee": "~0.4.0",
+    "grunt-contrib-uglify": "~0.1.1",
+    "grunt-contrib-stylus": "~0.4.0",
+    "grunt-contrib-copy": "~0.4.0",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt-contrib-concat": "~0.1.2"
+  }
+}

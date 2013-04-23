@@ -1,0 +1,32 @@
+{
+  "name": "lungo.icon",
+  "description": "Lungo Icon Repository",
+  "version": "2.2.0",
+  "homepage": "http://lungo.tapquo.com",
+  "author": {
+    "name": "Tapquo S.L."
+  },
+  "main": [
+    "./lungo.icon.css"
+  ],
+  "keywords": [
+    "mobile"
+  ],
+  "dependencies": {
+    "lungo": "~2.1.0"
+  },
+  "license": [
+    {
+      "type": "GPLv3"
+    },
+    {
+      "type": "Commercial"
+    }
+  ],
+  "_id": "lungo.icon@2.2.0",
+  "readme": "ERROR: No README.md file found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TapQuo/lungo.icon.git"
+  }
+}

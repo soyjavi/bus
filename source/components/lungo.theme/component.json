@@ -1,0 +1,33 @@
+{
+  "name": "lungo.theme",
+  "description": "Lungo default theme in STYLUS format",
+  "version": "2.1.0325",
+  "homepage": "http://lungo.tapquo.com",
+  "author": {
+    "name": "Tapquo S.L."
+  },
+  "main": [
+    "./theme.lungo.less"
+  ],
+  "keywords": [
+    "mobile"
+  ],
+  "dependencies": {
+    "lungo.brownie": "~2.1.0316"
+  },
+  "license": [
+    {
+      "type": "GPLv3"
+    },
+    {
+      "type": "Commercial"
+    }
+  ],
+  "gitHead": "570242257336e590cdff3c264203e456b49a45e1",
+  "_id": "lungo.theme@2.1.0325",
+  "readme": "ERROR: No README.md file found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TapQuo/package-lungo.theme.git"
+  }
+}
