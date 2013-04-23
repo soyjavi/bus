@@ -1,5 +1,4 @@
 Javi Jimenez Villar - @soyjavi
-Iñigo Gonzalez - @haas85
 
 [PRODUCT] v[0.1]
 Copyright (c) 2013
