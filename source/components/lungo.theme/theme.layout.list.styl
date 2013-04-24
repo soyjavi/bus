@@ -46,18 +46,27 @@
 
   aside & li
     background: none
-    &:not(:first-child)
-      border-top: solid 1px  lighten(COLOR, 5%)
-    &:not(:last-child)
-      border-bottom: solid 1px darken(COLOR, 20%)
-    &:active
-      background: darken(COLOR, 5%)
-    &.active
-      background: THEME
-    &.active, &:active
-      border-color: transparent
-      & strong, & small, & .icon
-        color: #fff
+
+    & strong:not(.tag), small
+      max-width: 232px
+      display: block
+
+    &.anchor
+      margin-top: 5%
+      & > .icon
+        font-size: S = 12px
+        width: S
+        height: S
+        margin-right: 2px
+
+    // &:active
+    //   background: darken(COLOR, 5%)
+    // &.active
+    //   background: THEME
+    // &.active, &:active
+    //   border-color: transparent
+    //   & strong, & small, & .icon
+    //     color: #fff
     & strong
       color: lighten(COLOR, 75%)
     & small, .icon

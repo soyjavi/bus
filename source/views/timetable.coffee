@@ -5,7 +5,7 @@ class __View.TimeTable extends Monocle.View
   template: """
     {{#items}}
     <li class="{{#favorite}}accept{{/favorite}}">
-      <span class="right tag">{{minutes}} m</span>
+      <span class="right tag"><span class="icon time"></span>{{minutes}} m</span>
       <strong>{{line}}</strong>
       <small>{{name}}</small>
     </li>
