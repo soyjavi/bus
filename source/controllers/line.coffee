@@ -16,7 +16,6 @@ class LineCtrl extends Monocle.Controller
 
     storage = Device.Storage.local App.key()
     @liked storage.lines[line.id]
-
     @stops.html ""
     #@TODO: Hacer optimización
     do __Model.LineStop.destroyAll
