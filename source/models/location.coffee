@@ -2,22 +2,34 @@ class __Model.Location extends Monocle.Model
 
   @fields "id", "name", "description", "type"
 
-  @fetch: ->
-    do @destroyAll
+  @filter: (value) -> @select (location) -> location.type is value.toString()
 
+  @fetch: ->
+    promise = new Hope.Promise()
+
+    do @destroyAll
     do Lungo.Notification.show
-    App.api("GET", "Consultar_FamiliasCentros").then (error, result) ->
+    App.api("GET", "Consultar_FamiliasCentros").then (error, groups) =>
       unless error
-        for group in result
+        for group in groups
           for location in group.Registros
+            #Parse
+            id = location.CodigoElemento
+            id = "0" + id  while id.length < 3
+            name = location.DescripcionElemento
+            name = name.charAt(0) + name.slice(1).toLowerCase()
+            #Model
             __Model.Location.create
-              id: location.CodigoElemento
-              name: location.DescripcionElemento.toLowerCase()
+              id: id
+              name: name
               description: group.DescripcionGrupo
               type: group.CodigoGrupo
 
-        console.error __Model.Location.all()
         do Lungo.Notification.hide
 
-      else
+        promise.done null, @all()
 
+      else
+        promise.done error, null
+
+    promise

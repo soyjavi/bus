@@ -1,0 +1,90 @@
+<section id="main" data-transition="" data-aside="menu" data-children="profile game" class="drag" data-pull="arrow-down">
+
+    <header class="shadow" data-title="Buscador">
+        <nav>
+            <a href="#" data-view-aside="menu" data-icon="menu"></a>
+        </nav>
+
+
+        <nav class="right">
+            <button data-view-section="new" data-article="challenges" data-icon="plus" data-label="New"></button>
+            <button data-action="save" data-article="settings" data-label="Save" data-icon="ok"></button>
+        </nav>
+    </header>
+
+
+    <nav data-control="groupbar" data-article="locations">
+        <a href="#" data-label="Municipios" data-group="99" data-count="0" class="active"></a>
+        <a href="#" data-label="Hospitales" data-group="2" data-count="0"></a>
+        <a href="#" data-label="Interes" data-group="13" data-count="0"></a>
+        <a href="#" data-label="Otros" data-group="1" data-count="0"></a>
+    </nav>
+
+    <article id="locations" class="list scroll">
+        <div class="form">
+            <fieldset>
+                <input type="search" class="inline left" placeholder="Buscar" />
+                <!--
+                <button data-action="search" class="small color inline right" data-label="Search"></button>
+            -->
+            </fieldset>
+        </div>
+        <ul></ul>
+    </article>
+
+
+    <article id="settings" class="indented scroll form">
+        <div>
+            <span class="big avatar margin-bottom shadow"></span>
+            <input type="file" />
+
+            <fieldset class="radius-top">
+                <input type="text" placeholder="Your nickname" class="text large bold align_center" id="txt_nickname">
+            </fieldset>
+            <fieldset>
+                <input type="text" placeholder="A few words about yourself" class="text small align_center" id="txt_bio"/>
+            </fieldset>
+            <fieldset class="radius-bottom shadow margin-bottom">
+                <span class="icon pushpin"></span>
+                <input type="text" placeholder="location" class="text align_center" id="txt_location" disabled />
+            </fieldset>
+
+            <label>ACCOUNT</label>
+            <fieldset class="radius shadow margin-bottom">
+                <span class="icon envelope"></span>
+                <label>Email</label>
+                <input type="text" placeholder="address" id="txt_mail" />
+                <span class="icon mobile-phone"></span>
+                <label>Phone</label>
+                <input type="text" placeholder="number" id="txt_phone" />
+                <span class="icon twitter"></span>
+                <label>Twitter</label>
+                <input type="text" placeholder="account" id="txt_twitter" />
+            </fieldset>
+
+            <label>CHANGE PASSWORD</label>
+            <fieldset class="radius shadow margin-bottom">
+                <span class="icon right"></span>
+                <label>Current</label>
+                <input type="password" placeholder="Password" id="txt_old_password" />
+                <label>New</label>
+                <input type="password" placeholder="New password" id="txt_password" />
+                <label>Repeat</label>
+                <input type="password" placeholder="New password" id="txt_repeat_password" />
+            </fieldset>
+
+            <button data-action="find_people" data-label="Find people" class="anchor color margin-bottom" data-icon="group"></button>
+            <button data-action="logout" data-label="Logout" class="anchor cancel" data-icon="signout"></button>
+        </div>
+    </article>
+
+    <!--
+    <footer>
+        <nav data-article="challenges">
+            <a href="#" data-icon="user" data-context="playing" data-count="0"></a>
+            <a href="#" data-icon="users" data-context="pending" data-count="0"></a>
+            <a href="#" data-icon="signal" data-context="finished" data-count="0"></a>
+        </nav>
+    </footer>
+    -->
+</section>
