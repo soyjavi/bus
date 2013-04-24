@@ -20,7 +20,7 @@ class LocationCtrl extends Monocle.Controller
             id: line.CodigoLinea
             name: line.DenominacionLinea
 
-          new __View.LineListItem model: m
+          new __View.Line model: m
 
         @title.html location.name
         Lungo.Router.section "location"

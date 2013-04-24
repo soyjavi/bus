@@ -1,4 +1,4 @@
-class __View.LocationListItem extends Monocle.View
+class __View.Location extends Monocle.View
 
   container: "section#main article#locations ul"
 

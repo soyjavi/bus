@@ -1,4 +1,4 @@
-class __View.LineListItem extends Monocle.View
+class __View.Line extends Monocle.View
 
   container: "section#location article ul"
 

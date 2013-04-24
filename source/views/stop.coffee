@@ -1,4 +1,4 @@
-class __View.LineStopListItem extends Monocle.View
+class __View.LineStop extends Monocle.View
 
   container: "section#line article ul"
 
@@ -16,4 +16,4 @@ class __View.LineStopListItem extends Monocle.View
     super
     @append @model
 
-  onTap: -> __Controller.Time.fetch @model
+  onTap: -> __Controller.Stop.fetch @model

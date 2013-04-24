@@ -36,7 +36,7 @@ class LineCtrl extends Monocle.Controller
               latitude: linestop.Latitud
               longitude: linestop.Longitud
 
-            new __View.LineStopListItem model: m
+            new __View.LineStop model: m
 
         @title.html @line.id
         Lungo.Router.section "line"
@@ -46,11 +46,16 @@ class LineCtrl extends Monocle.Controller
   onLike: (event) =>
     storage = Device.Storage.local App.key()
     if @like.hasClass "star"
-      delete storage.lines[@line.id]
-      @liked false
+      model = __Model.FavoriteLine.findBy "id", @line.id
+      if model
+        delete storage.lines[@line.id]
+        model.destroy()
+        @liked false
     else
-      storage.lines[@line.id] = @line.attributes()
-      @liked true
+      model = __Model.FavoriteLine.create @line.attributes()
+      if model
+        storage.lines[@line.id] = @line.attributes()
+        @liked true
     Device.Storage.local App.key(), storage
 
   liked: (like) =>
