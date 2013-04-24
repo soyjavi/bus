@@ -4,14 +4,18 @@ class __View.TimeTable extends Monocle.View
 
   template: """
     {{#items}}
-    <li class="{{#favorite}}bck theme{{/favorite}}">
-      <strong>{{line}}</strong>
+    <li class="{{#favorite}}accept{{/favorite}}">
       <span class="right tag">{{minutes}} m</span>
-      <small>{{name}} - {{type}}</small>
+      <strong>{{line}}</strong>
+      <small>{{name}}</small>
     </li>
     {{/items}}
   """
 
   constructor: ->
     super
+
+    @model.items = @model.items.sort (a, b) ->
+     if parseInt(a.minutes) >= parseInt(b.minutes) then 1 else -1
+
     @html @model
