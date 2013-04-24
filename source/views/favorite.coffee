@@ -1,10 +1,10 @@
-class __View.FavoriteStop extends Monocle.View
+class __View.Favorite extends Monocle.View
 
   container: "aside#menu #favorite-stops ul"
 
   template: """
     <li>
-        <div class="right tag">{{distance}}s</div>
+        <span class="right tag">{{distance}}s</span>
         <strong>{{name}}</strong>
         <small>{{location}}</small>
     </li>

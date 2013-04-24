@@ -1,20 +1,17 @@
 class FavoritesCtrl extends Monocle.Controller
 
-
   constructor: ->
     super
-    __Model.FavoriteLine.bind "create", @FavoriteCreated
     __Model.FavoriteStop.bind "create", @FavoriteCreated
+    do @storage
 
-
+  storage: ->
     storage = Device.Storage.local App.key()
-    Device.Storage.local App.key(), {lines: {}, stops: {}} unless storage
-    @fetch storage
+    if storage
+      __Model.FavoriteStop.create storage.stops[stop] for stop of storage.stops
+    else
+      Device.Storage.local App.key(), {lines: {}, stops: {}}
 
-  fetch: (storage) ->
-    __Model.FavoriteLine.create storage.lines[line] for line of storage.lines
-    __Model.FavoriteStop.create storage.stops[stop] for stop of storage.stops
+  FavoriteCreated: (model) -> new __View.Favorite model: model
 
-  FavoriteCreated: (model) -> new __View[model.className] model: model
-
-__Controller.Favorites = new FavoritesCtrl "body"
+__Controller.Favorites = new FavoritesCtrl "aside"

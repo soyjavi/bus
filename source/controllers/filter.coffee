@@ -14,7 +14,7 @@ class FilterCtrl extends Monocle.Controller
     super
     __Model.Location.fetch().then (error, result) =>
       do @_filter
-      # Lungo.Aside.toggle()
+      do Lungo.Aside.toggle
 
   onFilter: (event) ->
     el = Monocle.Dom(event.currentTarget)
