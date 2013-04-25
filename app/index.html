@@ -33,6 +33,35 @@
 
 <body>
     <!--
+    <section id="test">
+        <header></header>
+        <article id="sss">
+            <div class="layout list scroll">
+                <div data-layout="secondary" style="background: #bbb;">&nbsp;</div>
+                <div data-layout="primary" style="background: #999;" class="lsist scsroll">
+                    <ul>
+                        <li>sad</li>
+                        <li>sad</li>
+                        <li>sad</li>
+                        <li>sad</li>
+                        <li>sad</li>
+                        <li>sad</li>
+                        <li>sad</li>
+                        <li>sad</li>
+                        <li>sad</li>
+                        <li>sad</li>
+                        <li>sad</li>
+                        <li>sad</li>
+                        <li>sad</li>
+                        <li>sad</li>
+                    </ul>
+                </div>
+            </div>
+
+        </article>
+    </section>
+-->
+    <!--
     <section id="security" data-transition="slide">
         <article id="login" class="indented splash">
             <img src="static/images/logo.png" class="logo"/>
@@ -66,7 +95,13 @@
     -->
 
     <!-- Lungo dependencies -->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
     <script src="static/javascripts/bus.core.js"></script>
+    <script src="components/lungo.gmap/lungo.sugar.gmap.js"></script>
+    <script src="components/lungo.gmap/lungo.sugar.gmap.interface.js"></script>
+    <script src="components/lungo.gmap/lungo.sugar.gmap.route.js"></script>
+
     <script>
         Lungo.init({
             name: 'Konnes',
@@ -78,6 +113,7 @@
                 'static/views/line.html',
                 'static/views/time.html']
         });
+
     </script>
     <script src="static/javascripts/bus.debug.js"></script>
 </body>

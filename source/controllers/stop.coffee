@@ -29,6 +29,20 @@ class StopCtrl extends Monocle.Controller
               favorite: if storage.lines[time.Linea] then true else false
 
           new __View.TimeTable model: items: timetable
+
+
+        position =
+          latitude: @linestop.latitude
+          longitude: @linestop.longitude
+
+        Lungo.Sugar.GMap.init
+          el: ".map"
+
+        Lungo.Sugar.GMap.addMarker position, null, false
+        Lungo.Sugar.GMap.center position
+        Lungo.Sugar.GMap.zoom 17
+        Lungo.Sugar.GMap.clean()
+
         Lungo.Router.section "time"
 
       do Lungo.Notification.hide
@@ -58,3 +72,10 @@ class StopCtrl extends Monocle.Controller
       @like.removeClass("star").addClass("star-empty")
 
 __Controller.Stop = new StopCtrl "section#time"
+
+Lungo.ready ->
+  # Lungo.Sugar.GMap.init
+  #   el: ".map"
+  # Lungo.Sugar.GMap.image
+  #   el: ".map"
+
