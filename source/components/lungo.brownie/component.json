@@ -1,7 +1,7 @@
 {
   "name": "lungo.brownie",
   "description": "HTML5 Cross-Device Framework.",
-  "version": "2.1.0423",
+  "version": "2.1.0425",
   "homepage": "http://lungo.tapquo.com",
   "author": {
     "name": "Tapquo S.L."
@@ -24,8 +24,8 @@
       "type": "Commercial"
     }
   ],
-  "gitHead": "1411b71ee0d88209e2b5dd6f37bd3b4caa9d87fe",
-  "_id": "lungo.brownie@2.1.0423",
+  "gitHead": "eb95d1a8685d4ce0e703c63fb7f291744f8db966",
+  "_id": "lungo.brownie@2.1.0425",
   "readme": "ERROR: No README.md file found!",
   "repository": {
     "type": "git",
